@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,47 +15,94 @@
   </style>
 </head>
 <body>
+  <main id="wrapper">
+    <article class="left-side" id="calculator-side">
+      <div id="nav" class="top-left">
+        <h4 class="mid-header">Mortgage Calculator</h4>
+        <h5 class="label link">Clear All</h5>
+      </div>
 
-  Mortgage Calculator
-  Clear All
+      <form action="">
+        <div class="">
+          <label for="mortgage-amount">
+            Mortgage Amount
+          </label>
+          <input  value="" placeholder="$">
+        </div>
 
-  Mortgage Amount
+        <div>
+          <label for="mortgage-term">
+            Mortgage Term
+          </label>
+          <input type="text" placeholder="Years">
+        </div>
 
-  Mortgage Term
+        <div>
+          <label for="interest">Interest Rate</label>
+        <input type="text" placeholder="%">
+        </div>
 
-  Interest Rate
+        <div>
+        <label>Mortgage Type</label>
+        <div>
+          <input type="radio" name="repayment" id="repayment">
+          <label for="repayment">Repayment</label>
+        </div>
 
-  Mortgage Type
-  Repayment
-  Interest Only
+          <div>
+            <input type="radio" name="interest" id="interest-only">
+            <label for="interest-only">Interest Only</label>
+          </div>
+        
+        <button type="submit">Calculate Repayments</button>
+      </form>
 
-  Calculate Repayments
+    </article>
+    
+    <!-- Empty results start -->
+    <article id="empty-results" class="right-side bottom">
+      
+      <div class="artwork" id="art"></div>
+      <h3 class="title">Results shown here</h3>
+      
+      <div class="para">
+        <p>Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+      </div>
+    </article>
+    
+    <!-- Empty results end -->
+    
+    <!-- Completed results start -->
+    
+    <article id="completed-results" class="hidden right-side bottom">
 
-  <!-- Empty results start -->
+      <div class="artwork" id="art"></div>
 
-  Results shown here
+      <div class="title-para">
+        <h3 class="title">Your results</h3>
+        
+        <div class="para">
+          <p>Your results are shown below based on the information you provided. 
+            To adjust the results, edit the form and click “calculate repayments” again.</p>
+        </div>
 
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
+        <div class="payment-div">
+          <div>
+            <h4 class="label">Your monthly repayment:</h4>
+            <h1 class="payment">$1,797.74</h1>
+          </div>
+          <div>
+            <h4 class="label">Total you'll repay over the term</h4>
 
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
 </body>
 </html>
